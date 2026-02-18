@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WealthHome – Tu Hogar en Cúcuta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="img/logo.svg" alt="Logo" onerror="this.style.display='none'">
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#" class="active">Inicio</a></li>
+    <li><a href="#arriendo">Arrendar</a></li>
+    <li><a href="#">Vender</a></li>
+    <li><a href="#">Comprar</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="btn-login">Ingresar</button>
+    <a href="#" class="btn-primary">Comenzar</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#" class="active" onclick="closeMobileMenu()">Inicio</a></li>
+    <li><a href="#arriendo" onclick="closeMobileMenu()">Arrendar</a></li>
+    <li><a href="#" onclick="closeMobileMenu()">Vender</a></li>
+    <li><a href="#" onclick="closeMobileMenu()">Comprar</a></li>
+    <li><a href="#nosotros" onclick="closeMobileMenu()">Nosotros</a></li>
+  </ul>
+  <div class="mobile-menu-actions">
+    <button class="btn-login" onclick="closeMobileMenu()">Ingresar</button>
+    <a href="#" class="btn-primary" onclick="closeMobileMenu()">
+      <i class="fas fa-home"></i> Comenzar Ahora
+    </a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" alt="Casa en Cúcuta">
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span></span>
+      #1 Inmobiliaria en Cúcuta
+    </div>
+    <h1>El lugar donde tu historia <em>empieza a escribirse.</em></h1>
+    <p>No buscas cuatro paredes — buscas el sitio donde tus hijos van a crecer, donde tomarás el café de las mañanas y donde la vida te va a saber diferente. Ese lugar existe en Cúcuta, y nosotros te ayudamos a encontrarlo.</p>
+
+    <div class="search-bar">
+      <div class="search-field">
+        <label>Quiero</label>
+        <select>
+          <option>Comprar</option>
+          <option>Arrendar</option>
+          <option>Vender</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label>Tipo de inmueble</label>
+        <select>
+          <option>Cualquiera</option>
+          <option>Casa</option>
+          <option>Apartamento</option>
+          <option>Finca / Lote</option>
+          <option>Local comercial</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label>Barrio / Sector</label>
+        <input type="text" placeholder="Ej. El Salado, La Merced...">
+      </div>
+      <button class="search-btn">
+        <i class="fas fa-search"></i> Buscar
+      </button>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="stat-number">800+</div>
+        <div class="stat-label">Inmuebles</div>
+      </div>
+      <div>
+        <div class="stat-number">1.200+</div>
+        <div class="stat-label">Familias felices</div>
+      </div>
+      <div>
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Años en Cúcuta</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEJORES INMUEBLES ===== -->
+<section class="section-light fade-in" id="arriendo">
+  <div class="section-header">
+    <div>
+      <h2>Las mejores opciones de Cúcuta</h2>
+      <p>Cada propiedad fue seleccionada pensando en ti. Sectores seguros, vecindarios con vida y el precio justo que mereces.</p>
+    </div>
+    <a href="#" class="btn-outline">Ver todos <i class="fas fa-arrow-up-right"></i></a>
+  </div>
+
+  <div class="cards-grid">
+
+    <!-- Card 1 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="WealthHome Inmobiliaria" loading="lazy">
+        <span class="card-badge nuevo">Nuevo</span>
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 380.000.000</div>
+        <div class="card-agency">WealthHome Inmobiliaria</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Urb. El Bosque, Cúcuta</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 3 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 2 Baños</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 120 m²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="WealthHome Realty" loading="lazy">
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 215.000.000</div>
+        <div class="card-agency">WealthHome Realty</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Barrio La Merced, Cúcuta</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 2 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 2 Baños</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 85 m²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="WealthHome Premium" loading="lazy">
+        <span class="card-badge">Destacado</span>
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 520.000.000</div>
+        <div class="card-agency">WealthHome Premium</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Conj. Cerrado San Luis, Cúcuta</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 4 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 3 Baños</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 210 m²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="WealthHome Arriendo" loading="lazy">
+        <span class="card-badge">En arriendo</span>
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 1.800.000 / mes</div>
+        <div class="card-agency">WealthHome Arriendo</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Centro histórico, Cúcuta</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 2 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 1 Baño</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 70 m²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1592595896616-c37162298647?w=600&q=80" alt="WealthHome Realty" loading="lazy">
+        <span class="card-badge nuevo">Nuevo</span>
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 295.000.000</div>
+        <div class="card-agency">WealthHome Realty</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Barrio El Salado, Cúcuta</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 3 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 2 Baños</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 130 m²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="WealthHome Inmuebles" loading="lazy">
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 175.000.000</div>
+        <div class="card-agency">WealthHome Inmuebles</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Villa del Rosario, N. de Santander</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 2 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 1 Baño</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 65 m²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="WealthHome Premium" loading="lazy">
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 680.000.000</div>
+        <div class="card-agency">WealthHome Premium</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Country Club, Cúcuta</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 5 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 4 Baños</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 320 m²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="property-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600&q=80" alt="WealthHome Arriendo" loading="lazy">
+        <span class="card-badge nuevo">Nuevo</span>
+        <button class="card-fav" onclick="toggleFav(this)"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-price">$ 2.500.000 / mes</div>
+        <div class="card-agency">WealthHome Arriendo</div>
+        <div class="card-address"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:4px;font-size:0.66rem"></i>Av. Libertadores, Cúcuta</div>
+        <div class="card-features">
+          <div class="feature"><i class="fas fa-bed"></i> 3 Hab.</div>
+          <div class="feature"><i class="fas fa-bath"></i> 2 Baños</div>
+          <div class="feature"><i class="fas fa-ruler-combined"></i> 100 m²</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ESPECIALIZADOS ===== -->
+<div class="features-section section-white fade-in">
+  <div class="features-img">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Casa moderna Cúcuta">
+    <div class="features-badge-overlay">
+      <div class="badge-icon"><i class="fas fa-star"></i></div>
+      <div class="badge-text">
+        <strong>4.9 / 5.0</strong>
+        <span>Calificación de clientes</span>
+      </div>
+    </div>
+  </div>
+  <div class="features-content">
+    <h2>Porque tu hogar merece más que una simple transacción</h2>
+    <p>Sabemos que esta es una de las decisiones más importantes de tu vida. Por eso no somos solo intermediarios — somos el equipo que te acompaña desde el primer recorrido hasta el día que recibes las llaves con el corazón lleno de emoción.</p>
+    <div class="features-list">
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Asesoría personalizada</div>
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Zonas seguras y valoradas</div>
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Trámites sin complicaciones</div>
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Acompañamiento 24/7</div>
+    </div>
+    <a href="#" class="btn-primary">Conoce nuestro equipo <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<!-- ===== EXPERTOS ===== -->
+<div class="features-section section-light fade-in" style="direction: rtl;" id="nosotros">
+  <div class="features-img" style="direction: ltr;">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Barrios de Cúcuta">
+    <div class="features-badge-overlay">
+      <div class="badge-icon"><i class="fas fa-award"></i></div>
+      <div class="badge-text">
+        <strong>12+ años</strong>
+        <span>Presencia en Cúcuta</span>
+      </div>
+    </div>
+  </div>
+  <div class="features-content" style="direction: ltr;">
+    <h2>Conocemos Cúcuta calle por calle, barrio por barrio</h2>
+    <p>No cualquier inmobiliaria puede decir eso. Llevamos más de 12 años construyendo confianza en el Norte de Santander. Sabemos qué sectores van a crecer, cuáles tienen mejor calidad de vida, y dónde tú y tu familia van a estar mejor.</p>
+    <div class="features-list">
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Conocimiento local profundo</div>
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Red de confianza en la región</div>
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Avalúos certificados</div>
+      <div class="feature-item"><i class="fas fa-check-circle"></i> Asesoría en crédito hipotecario</div>
+    </div>
+    <a href="#" class="btn-primary">Ver nuestros proyectos <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<!-- ===== VIDEO ===== -->
+<section class="video-section fade-in">
+  <div class="section-header">
+    <h2>Vive la experiencia antes de decidir</h2>
+    <p>Recorre nuestras propiedades en video y enamórate desde la comodidad de tu celular. Así se encuentra hogar hoy en Cúcuta.</p>
+  </div>
+  <div class="video-wrapper">
+    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80" alt="Tour virtual propiedades Cúcuta">
+    <div class="video-overlay">
+      <div class="play-btn"><i class="fas fa-play"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENTES ===== -->
+<section class="customers-section fade-in">
+  <div class="customers-header">
+    <div>
+      <div style="color:var(--primary);font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;">Nuestras Familias</div>
+      <h2>Más de 1.200 familias ya encontraron su hogar en Cúcuta</h2>
+      <div class="avatar-group">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+        <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="">
+        <div class="avatar-more">99+</div>
+      </div>
+    </div>
+    <a href="#" class="btn-outline">Ver todas las historias <i class="fas fa-arrow-up-right"></i></a>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <!-- Testimonio 1 (grande) -->
+    <div class="testimonial-card large">
+      <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80" alt="Carlos Quintero" loading="lazy">
+      <div class="testimonial-overlay"></div>
+      <div class="testimonial-info">
+        <div>
+          <div class="testimonial-name">Carlos Quintero</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>5.0</span>
+          </div>
+        </div>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-avatar" alt="Carlos Quintero">
+      </div>
+    </div>
+
+    <!-- Testimonio 2 -->
+    <div class="testimonial-card">
+      <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80" alt="María Pérez" loading="lazy">
+      <div class="testimonial-overlay"></div>
+      <div class="testimonial-info">
+        <div>
+          <div class="testimonial-name">María Pérez</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>5.0</span>
+          </div>
+        </div>
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-avatar" alt="María Pérez">
+      </div>
+    </div>
+
+    <!-- Testimonio 3 -->
+    <div class="testimonial-card">
+      <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80" alt="Jorge Molina" loading="lazy">
+      <div class="testimonial-overlay"></div>
+      <div class="testimonial-info">
+        <div>
+          <div class="testimonial-name">Jorge Molina</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>5.0</span>
+          </div>
+        </div>
+        <img src="https://randomuser.me/api/portraits/men/68.jpg" class="testimonial-avatar" alt="Jorge Molina">
+      </div>
+    </div>
+
+    <!-- Testimonio 4 -->
+    <div class="testimonial-card">
+      <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80" alt="Valentina Ruiz" loading="lazy">
+      <div class="testimonial-overlay"></div>
+      <div class="testimonial-info">
+        <div>
+          <div class="testimonial-name">Valentina Ruiz</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>5.0</span>
+          </div>
+        </div>
+        <img src="https://randomuser.me/api/portraits/women/22.jpg" class="testimonial-avatar" alt="Valentina Ruiz">
+      </div>
+    </div>
+
+    <!-- Testimonio 5 -->
+    <div class="testimonial-card">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Andrés Cárdenas" loading="lazy">
+      <div class="testimonial-overlay"></div>
+      <div class="testimonial-info">
+        <div>
+          <div class="testimonial-name">Andrés Cárdenas</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>5.0</span>
+          </div>
+        </div>
+        <img src="https://randomuser.me/api/portraits/men/55.jpg" class="testimonial-avatar" alt="Andrés Cárdenas">
+      </div>
+    </div>
+
+    <!-- Testimonio 6 -->
+    <div class="testimonial-card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Laura Vásquez" loading="lazy">
+      <div class="testimonial-overlay"></div>
+      <div class="testimonial-info">
+        <div>
+          <div class="testimonial-name">Laura Vásquez</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>5.0</span>
+          </div>
+        </div>
+        <img src="https://randomuser.me/api/portraits/women/88.jpg" class="testimonial-avatar" alt="Laura Vásquez">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-text">🏠 wealthome</div>
+      <p>Acompañamos a las familias cucuteñas a encontrar el lugar donde quieren vivir su historia. Confianza, experiencia y corazón en cada negociación.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Comprar</a></li>
+        <li><a href="#">Vender</a></li>
+        <li><a href="#">Arrendar</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Soporte</h4>
+      <ul>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contáctanos</h4>
+      <p><i class="fas fa-envelope" style="color:var(--primary);margin-right:6px;"></i> hola@wealthome.co</p>
+      <p><i class="fas fa-phone" style="color:var(--primary);margin-right:6px;"></i> +57 312 345 6789</p>
+      <p><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i> Av. 4N #12-45, Cúcuta,<br>Norte de Santander</p>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright &copy; 2025 WealthHome. Todos los derechos reservados. Hecho con ❤️ en Cúcuta.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
